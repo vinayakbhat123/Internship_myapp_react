@@ -7,7 +7,7 @@ function Signup() {
   };
   return (
     <div className="min-h-screen flex w-auto px-24 pt-6 pl-16">
-      {/* LEFT SIDE – FORM */}
+  
       <div className="w-full md:w-1/2 flex items-center justify-center bg-white shadow-2xl rounded-sm py-10">
         <div className="w-full max-w-md px-8">
           <h1 className="text-3xl font-bold mb-2">Hello!</h1>
@@ -64,7 +64,7 @@ function Signup() {
         </div>
       </div>
 
-      {/* RIGHT SIDE – INFO PANEL */}
+     
       <div className="hidden md:flex w-1/2 bg-[#86AFA0] items-center justify-center text-white shadow-2xl rounded-sm">
         <div className="text-center">
           <div className="text-6xl mb-4">⚽</div>
