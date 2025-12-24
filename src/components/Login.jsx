@@ -10,7 +10,7 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (password === "admin@123") {
+    if (password === "admin@123" && email==="vinayakbhat@gmail.com") {
       setAlertMsg("Login successful!");
       setAlertType("success");
       setShowAlert(true);
