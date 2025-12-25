@@ -1,15 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Alert from "./Alert";
+import { LoginDataValidation } from "../utils/ValidateData";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [alertMsg, setAlertMsg] = useState("");
   const [alertType, setAlertType] = useState("success");
+  const [ErrorMessage,setErrorMessage] = useState("")
 
   const handleLogin = (e) => {
     e.preventDefault();
+    const message = LoginDataValidation(email,password)
+    setErrorMessage(message)
+    if (message) return
     if (password === "admin@123" && email==="vinayakbhat@gmail.com") {
       setAlertMsg("Login successful!");
       setAlertType("success");
@@ -68,6 +73,8 @@ function Login() {
             >
               Login
             </button>
+            {ErrorMessage && 
+            <p className="text-red-500">{ErrorMessage}</p>}
           </form>
           <p className="text-sm text-gray-500 mt-4 text-center">
             Don’t have an account?{" "}
