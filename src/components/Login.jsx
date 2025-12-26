@@ -15,7 +15,7 @@ function Login() {
     const message = LoginDataValidation(email,password)
     setErrorMessage(message)
     if (message) return
-    if (password === "admin@123" && email==="vinayakbhat@gmail.com") {
+    if (password === "Admin@123") {
       setAlertMsg("Login successful!");
       setAlertType("success");
       setShowAlert(true);
