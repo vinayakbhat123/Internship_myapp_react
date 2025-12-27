@@ -13,9 +13,10 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     const message = LoginDataValidation(email,password)
+    console.log(message)
     setErrorMessage(message)
     if (message) return
-    if (password === "Admin@123") {
+    if (password === "admin@123") {
       setAlertMsg("Login successful!");
       setAlertType("success");
       setShowAlert(true);
@@ -61,6 +62,7 @@ function Login() {
               <input
                 type="password"
                 value={password}
+                autoComplete="current-password"
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="*******"
