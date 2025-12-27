@@ -1,6 +1,7 @@
 export const LoginDataValidation = (email,password) => {
  const EmailValidation =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
- const PasswordValidation = /^(?=.*?[0-9])(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[^0-9A-Za-z]).{8,32}$/.test(password);
+const PasswordValidation =
+  /^(?=.*?[0-9])(?=.*?[a-z])(?=.*?[^0-9A-Za-z]).{8,32}$/.test(password);
  
  if (!EmailValidation) return "Email Id Not valid";
  if (!PasswordValidation) return "Password Not Valid";
